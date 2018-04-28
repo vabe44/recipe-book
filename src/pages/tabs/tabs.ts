@@ -1,4 +1,4 @@
-import { RecipePage } from './../recipe/recipe';
+import { RecipesPage } from './../recipes/recipes';
 import { ShoppingListPage } from './../shopping-list/shopping-list';
 import { Component } from '@angular/core';
 
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
   shoppingListPage = ShoppingListPage;
-  recipesPage = RecipePage;
+  recipesPage = RecipesPage;
 }
