@@ -8,27 +8,30 @@
 
 
   <ion-content padding>
-    <form>
+    <form #f="ngForm" (ngSubmit)="onAddItem(f)">
       <ion-list>
         <ion-item>
           <ion-label floating>Name</ion-label>
-          <ion-input 
-            type="text" 
-            name="ingredientName" 
-            ngModel></ion-input>
+          <ion-input
+            type="text"
+            name="ingredientName"
+            ngModel
+            required></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Amount</ion-label>
-          <ion-input 
-            type="number" 
-            name="amount" 
+          <ion-input
+            type="number"
+            name="amount"
             ngModel
+            required
             ></ion-input>
         </ion-item>
       </ion-list>
-      <button 
-        ion-button 
-        type="submit" 
-        block>Add Item</button>
+      <button
+        ion-button
+        type="submit"
+        block
+        [disabled]="f.invalid">Add Item</button>
     </form>
   </ion-content>
