@@ -1,7 +1,7 @@
 import { AuthService } from './../../services/auth';
 import { NgForm } from '@angular/forms';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, LoadingController, AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -18,7 +18,7 @@ export class SignupPage {
       content: 'Signing you up...'
     });
     loading.present();
-    this.authService.signUp(form.value.email, form.value.password)
+    this.authService.signup(form.value.email, form.value.password)
       .then(data => {
         loading.dismiss();
       })
